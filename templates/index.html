@@ -1,0 +1,388 @@
+{% extends "base.html" %}
+{% block title %}🏠Home | {% endblock title %}
+{% block body %}
+<header class="jumbotron jumbotron-fluid text-center">
+  <div class="container my-2">
+      <h1 class="display-4">🔍Discover Your World🌏<br> with Us🤝</h1>
+      <p class="lead">"Experience the magic ✨ of India unforgettable journeys await with us!"</p>
+  </div>
+</header>
+<main>
+  <!-- Ensure proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <section id="hero" class="hero section light-background">
+    <div class="container px-0 my-2">
+      <div class="row gy-4 justify-content-center justify-content-lg-between px-4">
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Hero Section -->
+
+  <!-- Carousel -->
+  <div class="container">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="static/Chardham-Yatra.jpg" class="d-block w-100" alt="..." height="380">
+        </div>
+        <div class="carousel-item">
+          <img src="static/Rishikesh-Uttarakhand.jpg" class="d-block w-100" alt="..." height="380">
+        </div>
+        <div class="carousel-item">
+          <img src="static/laxmi.jpg" class="d-block w-100" alt="..." height="380">
+        </div>
+        <div class="carousel-item">
+          <img src="static/manikaran.jpg" class="d-block w-100" alt="..." height="380">
+        </div>
+        <div class="carousel-item">
+          <img src="static/Uttarakhand.jpg" class="d-block w-100" alt="..." height="380">
+        </div>
+        <div class="carousel-item">
+          <img src="static/jaipur1.jpg" class="d-block w-100" alt="..." height="380">
+        </div>
+        <div class="carousel-item">
+          <img src="static/kd.jpg" class="d-block w-100" alt="..." height="380">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Best Packages -->
+  <div class="container my-4">
+    <section class="text-center container">
+      <div class="row py-lg-4">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h4>
+            <h1 class="fw-light">✈ Our Popular Tour Packages ✈</h1>
+          </h4>
+          <p class="lead text-body-secondary">Discover amazing travel deals with unbeatable prices on tickets and trips. Enjoy a seamless experience that turns your journeys into unforgettable memories!</p>
+        </div>
+      </div>
+    </section>
+    <section id="packages" class="container">
+      <div class="row">
+          <!-- Package 1-->
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="static/Rishikesh-Uttarakhand.jpg" class="card-img-top" alt="Package 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Tour Package To Rishikesh</h5>
+                      <p class="card-text">Discover the tranquility of Rishikesh, the Yoga Capital of the World, nestled along the sacred Ganges River, where spirituality and adventure converge.</p>
+                      <a href="/tourpackage" class="btn btn-outline-primary">Explore More Tour Packages</a>
+                  </div>
+              </div>
+          </div>  
+          <!-- Package 1 -->
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="static/Chardham-Yatra.jpg" class="card-img-top" alt="Package 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Tour Package to Chardham Yatra</h5>
+                      <p class="card-text">Embark on a sacred pilgrimage to the Char Dham, visiting shrines of Yamunotri, Gangotri, Kedarnath, and Badrinath for a profound spiritual awakening.</p>
+                      <a href="/tourpackage" class="btn btn-outline-primary">Explore More Tour Packages</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Package 1 -->
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="static/jaipur1.jpg" class="card-img-top" alt="Package 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Tour Package to Udaipur</h5>
+                      <p class="card-text">Experience the romantic allure of Udaipur, with its stunning lakes, majestic palaces, and vibrant cultural heritage.</p>
+                      <a href="/tourpackage" class="btn btn-outline-primary">Explore More Tour Packages</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section id="packages" class="container">
+    <div class="row">
+        <!-- Package 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="static/Leh-Ladakh.jpg" class="card-img-top" alt="Package 1">
+                <div class="card-body">
+                    <h5 class="card-title">Tour Package to Leh Ladakh</h5>
+                    <p class="card-text">Embark on an adventurous journey through Leh Ladakh, with its stunning landscapes, high-altitude deserts, and vibrant monasteries.</p>
+                    <a href="/tourpackage" class="btn btn-outline-primary">Explore More Tour Packages</a>
+                </div>
+            </div>
+        </div>
+        <!-- Package 2-->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="static/udaipur.jpg" class="card-img-top" alt="Package 2">
+                <div class="card-body">
+                    <h5 class="card-title">Tour Package to Udaipur</h5>
+                    <p class="card-text">	Experience the romantic allure of Udaipur, with its stunning lakes, majestic palaces, and vibrant cultural heritage.</p>
+                    <a href="/tourpackage" class="btn btn-outline-primary">Explore More Tour Packages</a>
+                </div>
+            </div>
+        </div>
+        <!-- Package 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="static/Manali.jpg" class="card-img-top" alt="Package 3">
+                <div class="card-body">
+                    <h5 class="card-title">Tour Package to Manali</h5>
+                    <p class="card-text"> Enjoy a rejuvenating escape in Manali with its picturesque landscapes, adventure activities, and serene atmosphere</p>
+                    <a href="/tourpackage" class="btn btn-outline-primary">Explore More Tour Packages</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- Best Places -->
+  <section class="text-center container">
+    <div class="row py-lg-4 ">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h4>
+          <h1 class="fw-light">🕉Best Places to Visit in India🕉</h1>
+        </h4>
+        <p class="lead text-body-secondary">India is a land of incredible diversity, with a rich tapestry of history, culture, and natural beauty that offers countless historical and remarkable places to visit. </p>
+      </div>
+    </div>
+  </section>
+  <section id="packages" class="container">
+    <div class="row">
+        <!-- Package 1-->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Rishikesh.jpg" class="card-img-top" alt="Package 1">
+                <div class="card-body">
+                    <p class="card-text">Rishikesh, the Yoga Capital of the World, is known for its spiritual atmosphere, yoga retreats, and adventure activities like white-water rafting.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>  
+        <!-- Package 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Shimla.jpg" class="card-img-top" alt="Package 2">
+                <div class="card-body">
+                    <p class="card-text">Shimla, the Queen of Hills, is a charming hill station in Himachal Pradesh, renowned for its colonial architecture and scenic mountain views.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+        <!-- Package 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Tawang.jpg" class="card-img-top" alt="Package 3">
+                <div class="card-body">
+                    <p class="card-text">Tawang, located in Arunachal Pradesh, is known for its stunning monasteries, especially Tawang Monastery, and its Himalayan landscapes.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="packages" class="container">
+  <div class="row">
+      <!-- Package 2 -->
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="/static/Kerala.jpg" class="card-img-top" alt="Package 1">
+              <div class="card-body">
+                  <p class="card-text">Kerala, known as God's Own Country, is celebrated for its tranquil backwaters, lush greenery, and diverse wildlife, offering a relaxation and adventure.</p>
+                  <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+              </div>
+          </div>
+      </div>
+      <!-- Package 2-->
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="static/udaipur.jpg" class="card-img-top" alt="Package 2">
+              <div class="card-body">
+                  <p class="card-text">	Experience the romantic allure of Udaipur, with its stunning lakes, majestic palaces, and vibrant cultural heritage.</p>
+                  <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+              </div>
+          </div>
+      </div>
+      <!-- Package 2 -->
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="/static/Kashmir.jpg" class="card-img-top" alt="Package 3">
+              <div class="card-body">
+                  <p class="card-text"> Kashmir, often referred to as "Paradise on Earth," is celebrated for its breathtaking landscapes, including serene lakes, verdant valleys, and snow mountains.</p>
+                  <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="packages" class="container">
+    <div class="row">
+        <!-- Package 3-->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Jaipur.jpg" class="card-img-top" alt="Package 2">
+                <div class="card-body">
+                    <p class="card-text">Jaipur, the Pink City of India, is renowned for its magnificent palaces, forts like Amber Fort, and vibrant bazaars, showcasing the rich cultural heritage of Rajasthan.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>  
+        <!-- Package 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Jaisalmer.jpg" class="card-img-top" alt="Package 2">
+                <div class="card-body">
+                    <p class="card-text">Jaisalmer, known as the Golden City, is famed for its majestic sandstone fort, intricately carved havelis, and desert landscapes that showcase Rajasthan's rich cultural heritage.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+        <!-- Package 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Khajuraho-Temples.jpg" class="card-img-top" alt="Package 3">
+                <div class="card-body">
+                    <p class="card-text">The Khajuraho Temple complex in Madhya Pradesh is famous for its stunning erotic sculptures and intricate carvings, reflecting India's rich artistic heritage.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="packages" class="container">
+  <div class="row">
+      <!-- Package 4 -->
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="/static/Goa-india.jpg" class="card-img-top" alt="Package 1">
+              <div class="card-body">
+                  <p class="card-text">Goa, India's smallest state, is celebrated for its stunning beaches, vibrant nightlife, and rich Portuguese heritage.</p>
+                  <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+              </div>
+          </div>
+      </div>
+      <!-- Package 4-->
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="/static/Manali.jpg" class="card-img-top" alt="Package 2">
+              <div class="card-body">
+                  <p class="card-text">	Manali is a popular hill station in Himachal Pradesh, known for its scenic beauty, adventure sports, and as a gateway to the Himalayas.</p>
+                  <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+              </div>
+          </div>
+      </div>
+      <!-- Package 4 -->
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="/static/Varanasi.jpg" class="card-img-top" alt="Package 3">
+              <div class="card-body">
+                  <p class="card-text">Varanasi, one of the oldest living cities in the world, is a spiritual hub for Hindus, famous for its ghats, temples, and the evening Ganga Aarti.</p>
+                  <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="packages" class="container">
+    <div class="row">
+        <!-- Package 5-->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Kutch.jpg"  class="card-img-top" alt="Package 1">
+                <div class="card-body">
+                    <p class="card-text">Kutch is renowned for its vast salt desert, vibrant handicrafts, and cultural festivals like the Rann Utsav, a vibrant destination.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>  
+        <!-- Package 5-->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Delhi.jpg" class="card-img-top" alt="Package 2">
+                <div class="card-body">
+                    <p class="card-text">Delhi, the capital city of India,blends rich historical landmarks like the Red Fort and Qutub Minar with modern urban developments.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+        <!-- Package 5 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/static/Leh-Ladakh.jpg" class="card-img-top" alt="Package 3">
+                <div class="card-body">
+                    <p class="card-text">Leh Ladakh, located in the Indian Himalayas, is renowned for its breathtaking landscapes, high-altitude deserts, and vibrant Buddhist monasteries.</p>
+                    <a href="/gallery" class="btn btn-outline-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>  
+<div class="container">
+  <footer class="footer bg-light py-4 py-md-5 py-xl-8 border-top border-light">
+      <div class="container">
+          <div class="row gy-4 gy-lg-0 justify-content-xl-between">
+              <div class="col-12 col-md-6 col-lg-3 mb-4">
+                  <div class="widget">
+                      <a href="#!">
+                        <img src="static/logo.png" alt="Logo" width="280" height="250">
+                      </a>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 mb-4">
+                  <div class="widget">
+                      <h4 class="widget-title mb-4">🤝 Get in Touch</h4>
+                      <address class="mb-4">Chandkheda, Ahmedabad <br>India 382424</address>
+                      <p class="mb-1">
+                          <a class="link-secondary text-decoration-none" href="tel:+15057922430">9499675701</a>
+                      </p>
+                      <p class="mb-0">
+                          <a class="link-secondary text-decoration-none" href="mailto:demo@yourdomain.com">www.traveltickets.pythonanywhere.com</a>
+                      </p>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 mb-4">
+                  <div class="widget">
+                      <h4 class="widget-title mb-4">📖 Learn More</h4>
+                      <ul class="list-unstyled">
+                          <li class="mb-2">
+                              <a href="/user" class="link-secondary text-decoration-none">👤Sign In/Register</a>
+                          </li>
+                          <li class="mb-2">
+                              <a href="/tourpackage" class="link-secondary text-decoration-none">🧳 Tour Packages</a>
+                          </li>
+                          <li class="mb-2">
+                              <a href="/gallery" class="link-secondary text-decoration-none">📸 Our Gallery</a>
+                          </li>
+                          <li class="mb-2">
+                            <a href="/review" class="link-secondary text-decoration-none">✍🏻Review</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/favourite" class="link-secondary text-decoration-none">❤️Favourite</a>
+                        </li>
+                          <li class="mb-2">
+                              <a href="/contact" class="link-secondary text-decoration-none">📞Contact Us</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 mb-4">
+                  <div class="widget">
+                      <h4 class="widget-title mb-4">🏕 Our TourTrustee</h4>
+                      <p class="mb-4">Subscribe to our TourTrustee to get our latest tour package & discounts delivered to you.</p>
+                      <form method="post" action=" ">{% csrf_token %}
+                          <div class="input-group">
+                              <span class="input-group-text">
+                                  <img src="static/mail.jpeg" alt="" height="30" width="30">
+                              </span>
+                              <input type="email" class="form-control" id="subscribeemail"  name="subscribeemail" placeholder="Email Address" aria-label="email-newsletter" required>
+                          </div>
+                          <button class="btn btn-primary mt-3 w-100" type="submit">Subscribe</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+</div>
+{% endblock body %}

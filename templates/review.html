@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}📝Review | {% endblock title %}
+{% block body %}
+<header class="jumbotron jumbotron-fluid text-center">
+    <div class="container my-2">
+        <h1 class="display-4">Your ✍️feedback shapes the journey🗺️</h1>
+        <p class="lead">"📢Share your travel stories and help 🙏others explore the world!🌏"</p>
+    </div>
+  </header>
+  <main>
+    <!-- Ensure proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="container">
+      <div class="form-container">
+          <form method="post" action="/review">
+              <!-- Add CSRF token if using Django or similar frameworks -->
+              {% csrf_token %}
+              <div class="row mb-3 my-4">
+               <label for="booktrip" class="col-sm-3 col-form-label col-form-label-lg">Destination:</label>
+                  <div class="col-sm-9">
+                      <select class="form-select form-select-lg" id="reviewtrip" name="reviewtrip" aria-label="Floating label select example" required>
+                          <option value="" disabled selected>--Select a trip--</option>
+                        {% for p in bookingsData%}
+                          <option value="{{p.id}}"> {{p.booktrip}}</option> {% endfor %}
+                          <!-- Add more options as needed -->
+                      </select>
+                  </div>
+              </div>   
+              <div class="row mb-3 my-2">
+                <label for="username" class="col-sm-3 col-form-label col-form-label-lg">Enter Username:</label>
+                <div class="col-sm-9">
+                    <input type="text" id="reviewer" name="reviewer" class="form-control form-control-lg" placeholder="--Enter Username--" required>
+                </div>
+            </div>
+            <div class="row mb-3 my-2">
+                <label for="rating" class="col-sm-3 col-form-label col-form-label-lg">Rating:</label>
+                <div class="col-sm-9">
+                    <input type="number" id="rating" name="rating" class="form-control form-control-lg" placeholder="--Rate Out of 10--" required>
+                </div>
+            </div>
+            <div class="form-group row mb-4">
+              <label for="comment" class="col-sm-3 col-form-label col-form-label-lg">Comment:</label>
+              <div class="col-sm-9">
+                  <textarea class="form-control form-control-lg" id="comment" name="comment" rows="4" placeholder="Enter your comments" required></textarea>
+              </div>
+          </div>
+          
+          <div class="form-group row mb-3 my-2">
+              <label for="review_date" class="col-sm-3 col-form-label col-form-label-lg">Review Date:</label>
+              <div class="col-sm-9">
+                  <input type="date" id="review_date" name="review_date" class="form-control form-control-lg" required>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>  
+       </div>
+    </div>
+{% endblock body %}

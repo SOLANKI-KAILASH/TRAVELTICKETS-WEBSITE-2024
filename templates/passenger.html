@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}👨‍👩‍👦‍👦 Passenger | {% endblock title %}
+{% block body %}
+<header class="jumbotron jumbotron-fluid text-center">
+    <div class="container my-2">
+        <h1 class="display-4">💁Provide your travel📃details here</h1>
+        <p class="lead">"Ensure♾️everything is💫set for your 🏕️adventure!"</p>
+    </div>
+  </header>
+  <main>
+       <!-- Ensure proper scaling on mobile devices -->
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <div class="container">
+         <div class="form-container">
+             <form method="post" action="/passenger">
+                 <!-- Add CSRF token if using Django or similar frameworks -->
+                 {% csrf_token %}
+                 <div class="row mb-3 my-4">
+                  <label for="trip" class="col-sm-3 col-form-label col-form-label-lg">Destination:</label>
+                     <div class="col-sm-9">
+                         <select class="form-select form-select-lg" id="booking" name="booking" aria-label="Floating label select example" required>
+                             <option value="" disabled selected>--Select a trip--</option>
+                         {% for p in bookingsData%}
+                             <option value="{{p.id}}"> {{p.booktrip}}</option> {% endfor %}
+                             <!-- Add more options as needed -->
+                         </select>
+                     </div>
+                 </div>   
+                 <div class="row mb-3 my-2">
+                    <label for="username" class="col-sm-3 col-form-label col-form-label-lg">First Name:</label>
+                    <div class="col-sm-9">
+                        <input type="name" id="first_name" name="first_name" class="form-control form-control-lg" placeholder="--Enter First Name--" required>
+                    </div>
+                </div>    
+                <div class="row mb-3 my-2">
+                    <label for="username" class="col-sm-3 col-form-label col-form-label-lg">Last Name:</label>
+                    <div class="col-sm-9">
+                        <input type="name" id="last_name" name="last_name" class="form-control form-control-lg" placeholder="--Enter Last Name--" required>
+                    </div>
+                </div>    
+                <div class="row mb-3 my-2">
+                    <label for="booking_date" class="col-sm-3 col-form-label col-form-label-lg">Date of Birth:</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="date_of_birth" name="date_of_birth" class="form-control form-control-lg" required>
+                </div>   
+                    </div>  
+                <div class="row mb-3 my-2">
+                    <label for="no_of_seats" class="col-sm-3 col-form-label col-form-label-lg">Passport No:</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control form-control-lg" id="passport_no" name="passport_no" placeholder="--Enter Your Passport No--" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>
+            </form>
+          </div>
+       </div>   
+{% endblock body %}

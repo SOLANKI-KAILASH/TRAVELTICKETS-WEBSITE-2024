@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}💸Payment | {% endblock title %}
+{% block body %}
+<header class="jumbotron jumbotron-fluid text-center">
+    <div class="container my-2">
+        <h1 class="display-4">🏆Finalize your booking🔐securely</h1>
+        <p class="lead">"⏳Complete your payment💳and embark on your adventure🪂with confidence!"</p>
+    </div>
+  </header>
+  <main>
+    <!-- Ensure proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="container">
+      <div class="form-container">
+          <form method="post" action="/payment">
+              <!-- Add CSRF token if using Django or similar frameworks -->
+              {% csrf_token %}
+              <div class="row mb-3 my-4">
+               <label for="trip" class="col-sm-3 col-form-label col-form-label-lg">Destination:</label>
+                  <div class="col-sm-9">
+                      <select class="form-select form-select-lg" id="booking" name="booking" aria-label="Floating label select example" required>
+                          <option value="" disabled selected>--Select a trip--</option>
+                      {% for p in bookingsData%}
+                          <option value="{{p.id}}"> {{p.booktrip}}</option> {% endfor %}
+                          <!-- Add more options as needed -->
+                      </select>
+                  </div>
+              </div>   
+              <div class="row mb-3 my-2">
+                 <label for="username" class="col-sm-3 col-form-label col-form-label-lg">Username:</label>
+                 <div class="col-sm-9">
+                     <input type="name" id="user" name="user" class="form-control form-control-lg" placeholder="--Enter UserName--" required>
+                 </div>
+             </div>    
+             <div class="row mb-3 my-2">
+              <label for="no_of_seats" class="col-sm-3 col-form-label col-form-label-lg">Amount:</label>
+              <div class="col-sm-9">
+                  <input type="number" class="form-control form-control-lg" id="amount" name="amount" placeholder="--Enter Amount--" required>
+              </div>
+            </div>
+             </div>    
+             <div class="row mb-3 my-2">
+                 <label for="booking_date" class="col-sm-3 col-form-label col-form-label-lg">Payment Date:</label>
+                 <div class="col-sm-9">
+                     <input type="date" id="payment_date" name="payment_date" class="form-control form-control-lg" required>
+                 </div>   
+            </div>  
+              <div class="row mb-3 my-2">
+                  <label for="status" class="col-sm-3 col-form-label col-form-label-lg">Payment Method:</label>
+                  <div class="col-sm-9">
+                  <select id="payment_method" name="payment_method" class="form-control form-control-lg" aria-label="Floating label select example" required>
+                      <option value="" disabled selected>--Payment Method--</option>
+                      <option value="credit card">Credit Card</option>
+                      <option value="debit card">Debit Card</option>
+                      <option value="paypal">PayPal</option>
+                      <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3 my-2">
+                <label for="status" class="col-sm-3 col-form-label col-form-label-lg">Status:</label>
+                <div class="col-sm-9">
+                <select id="status" name="status" class="form-control form-control-lg" aria-label="Floating label select example" required>
+                    <option value="" disabled selected>--Status--</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                    <option value="failed">Failed</option>
+                </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>
+         </form>
+       </div>
+    </div>   
+  
+{% endblock body %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %} 🧳Tour Package | {% endblock title %}
+{% block body %}
+<header class="jumbotron jumbotron-fluid text-center">
+  <div class="container my-2">
+      <h1 class="display-4">🔍Discover Your Next Adventure⛺</h1>
+      <p class="lead">"Explore our exclusive tour packages and book📚your dream vacation today!"</p>
+  </div>
+</header>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section id="packages" class="container">
+  <div class="row">
+    {% for k in tripData%}
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/static/{{k.image}}" class="card-img-top" alt="Package {{forloop.counter}}">
+          <div class="card-body">
+            <h4 class="display-7">{{k.title}}</h4>
+            <p class="card-text">{{k.tripdescription}}</p>
+            <a href="#" class="btn btn-outline-primary">Departure Location ❀ {{k.departure_location}}</a>
+            <a href="#" class="btn btn-outline-primary">Departure Date ❀ {{k.departure_date}}</a>
+            <a href="#" class="btn btn-outline-primary">Return Date ❀{{k.return_date}}</a>
+            <a href="#" class="btn btn-outline-primary">Price ❀ ₹{{k.price}}</a>
+            <a href="#" class="btn btn-outline-primary">Available Seats ❀{{k.available_seats}}</a>
+            <a href="#" class="btn btn-outline-primary">Status ❀{% if k.is_active %} ✅ {% else %}❌{% endif %}</a>
+              <br><br>
+              <a href="/booking" class="btn btn-outline-warning btn-lg btn-block">Book Now</a>
+          </div>
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:3 and not forloop.last %}
+        </div>
+        <div class="row">
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock body %}

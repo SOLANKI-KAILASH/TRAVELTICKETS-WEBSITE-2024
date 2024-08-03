@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>
+          👤Sign In | Travel Tickets
+        </title>
+      <link rel="shortcut icon" href="static/logo1.png"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <img src="static/logo1.png" alt="" height="60" width="90">
+          <h5><a class="navbar-brand" href="/">Travel Tickets</a></h5>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-4 mb-lg-0">
+              <li class="nav-item">
+                <h5><a class="nav-link active" aria-current="page" href="/">🏠Home</a></h5>
+              </li>
+              <li class="nav-item">
+                <h5><a class="nav-link" href="/tourpackage">🧳Tour Packages </a></h5>
+              </li>
+              <li class="nav-item dropdown">
+                <h5><a class="nav-link" href="/gallery">📸Gallery </a></h5>
+                </a></h5>
+                <li class="nav-item">
+                  <h5><a class="nav-link" href="/review">✍🏻Review</a></h5>
+                </li>
+                <li class="nav-item">
+                  <h5><a class="nav-link" href="/favourite">❤️Favourite</a></h5>
+                </li>
+                <li class="nav-item">
+                  <h5><a class="nav-link" href="/contact">📞Contact Us</a></h5>
+                </li>
+            </ul>
+            <h5><button class="btn btn-outline-success" type="submit">|| आपकी यात्रा शुभ और मंगलमय हो ||</button></h5>
+            <a href="/">
+              <h5 class="px-2"><button class="btn btn-outline-success" type="submit">Back to 🏠Home</button></h5>
+              </a>
+          </div>
+        </div>
+      </nav>
+      <header class="jumbotron jumbotron-fluid text-center">
+        <div class="container my-2">
+            <h1 class="display-4">Join us🤝 and start your journey✈</h1>
+            <p class="lead">"👤Register now to access🔐 exclusive travel deals🤝 and personalized recommendations💬!"</p>
+        </div>
+      </header>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <section class="vh-100">
+            <div class="container-fluid h-custom my-4">
+              <div class="row d-flex justify-content-center align-items-center h-50">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                  <img src="/static/logo.png"
+                    class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                  <form method="post" action="/user"> {% csrf_token %}
+                    <!-- Full Name input -->
+                    <div class="row mb-3 my-4">
+                        <label for="fullname" class="col-sm-3 col-form-label col-form-label-lg">Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Enter your Full Name" required>
+                        </div>
+                    </div>
+                
+                    <!-- Email input -->
+                    <div class="row mb-3 ">
+                        <label for="email" class="col-sm-3 col-form-label col-form-label-lg">Email Address</label>
+                        <div class="col-sm-9">
+                            <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="Enter a valid email address" required>
+                        </div>
+                    </div>
+                
+                    <!-- Password input -->
+                    <div class="row mb-3">
+                        <label for="password" class="col-sm-3 col-form-label col-form-label-lg">Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Enter password" required>
+                        </div>
+                    </div>
+                
+                    <!-- Date Joined input -->
+                    <div class="row mb-3">
+                        <label for="date_joined" class="col-sm-3 col-form-label col-form-label-lg">Date Joined</label>
+                        <div class="col-sm-9">
+                            <input type="date" id="date_joined" name="date_joined" class="form-control form-control-lg" required>
+                        </div>
+                    </div>
+                
+                    <!-- Last Login input -->
+                    <div class="row mb-3">
+                        <label for="last_login" class="col-sm-3 col-form-label col-form-label-lg">Last Login</label>
+                        <div class="col-sm-9">
+                            <input type="datetime-local" id="last_login" name="last_login" class="form-control form-control-lg" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary btn-lg">Sign In</button>
+                </form>
+          </section>
+          
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
