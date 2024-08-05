@@ -113,5 +113,3 @@ def reviewsuccess(request):
 def contactsuccess(request):
     return render(request,"contactsuccess.html")
 
-def razorpay(request):
-    return render(request,"razorpay.html")
