@@ -16,19 +16,18 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-import os
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("django-insecure-_)ffh&#7%4$r3q5f6c-3hlkvv*(^1pjes7im)(53=uu2es$%=%", "fallback-secret")
-
+SECRET_KEY = 'django-insecure-_)ffh&#7%4$r3q5f6c-3hlkvv*(^1pjes7im)(53=uu2es$%=%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False") == "True"
+DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
+import os
 # Application definition
 
 INSTALLED_APPS = [
